@@ -270,6 +270,11 @@ function checkcity() {
     }
 }
 
+
+function checkEmail() {
+ let x = document.getElementByID("email");
+ x.value = x.value.toLowerCase();
+
 function checkForErrors() {
     if (error_flag === 0) {
         document.getElementById("submit").disabled = false;
@@ -298,5 +303,6 @@ function validateForm() {
     checkAddress1();
     checkAddress2();
     checkcity();
+    checkEmail();
     checkForErrors();
 }
