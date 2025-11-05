@@ -221,7 +221,7 @@ function checkUserID() {
     var x = document.getElementById("userID").value;
     var userIDMessage = document.getElementById("userIDMessage");
 
-    if (x.match(/^[A-Za-z][A-Za-z0-9]{4,19}$/)) {
+    if (x.match(/^[A-Za-z][A-Za-z0-9_-]{4,19}$/)) {
         userIDMessage.innerHTML = "";
     } else {
         userIDMessage.innerHTML = "User ID must start with a letter and be at least 5 characters long but not longer than 20.";
