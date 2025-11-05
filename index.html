@@ -267,7 +267,11 @@
         size="30"
         pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20}$"
         title="Please enter your Email Address here." 
-        placeholder="name@domain.tld" required>
+        placeholder="name@domain.tld" 
+        required
+        oninput="checkEmail()"
+        onblur="checkEmail()">
+      <span id="emailMessage" class="error-message"></span>
       </td>
     </tr>
 
