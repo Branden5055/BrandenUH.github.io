@@ -272,8 +272,26 @@ function checkcity() {
 
 
 function checkEmail() {
- let x = document.getElementByID("email");
- x.value = x.value.toLowerCase();
+ let email = document.getElementById("email");
+ let message = document.getElementById("emailMessage");
+
+ email.value = email.value.toLowerCase();
+ let emailValue = email.value;
+
+ let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,20}$/;
+
+ if (emailValue === "") {
+  message.innerHTML = "Email is required.";
+  error_flag = 1;
+ }
+ else if (!regex.test(emailValue)) {
+  message.innerHTML = "Invalid Email Format.";
+  error_flag = 1;
+ }
+ else {
+  message.innerHTML = "";
+ }
+}
 
 function checkForErrors() {
     if (error_flag === 0) {
