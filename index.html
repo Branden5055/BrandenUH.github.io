@@ -136,7 +136,7 @@
         title="Please enter your Address here"
         placeholder="Enter Address 1"
         size="30" 
-        minlength="4"
+        minlength="2"
         maxlength="30" 
         onblur="checkAddress1()"
         oninvalid="this.setCustomValidity('Address Line 1 is Required')"
@@ -156,6 +156,7 @@
         size="30" 
         onblur="checkAddress2()"
         oninput="this.setCustomValidity('')"
+        minlength="2"
         maxlength="30">
       <span id="addressTwoMessage" class="error-message"></span>
       </td>
