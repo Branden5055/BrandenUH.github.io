@@ -282,7 +282,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var form = document.getElementById('signup');
   if (form) {
     form.addEventListener('input', validateForm);
-    validateForm(); 
   }
 });
 
