@@ -1,1 +1,71 @@
+ /*
+ Name: Branden Brar
+ File: HW2css.css
+ Date Created: 2025-09-25
+ Date Updated: 2025-10-24
+ Purpose: Creating a seperate CSS file for MIS 3371 HW2 Assignment
+ */  
+ body {
+    background-color:LightGray;
+    font-family:Arial, sans-serif; 
+ }
 
+header {
+    background-color: Crimson;
+    padding: 15px;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+}
+
+table.form-table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: white;
+  margin: auto;
+  width: 50%;  
+}
+
+.form-table td {
+    padding: 8px;
+}
+
+.form-table .actions {
+    text-align: center;
+}
+
+
+footer {
+    text-align: center;
+}
+
+#outputformdata {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#outputformdata table {
+  margin: 0 auto;             
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+#outputformdata th {
+  background-color: #2196F3;  
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+#outputformdata td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.error-message { 
+  color: red; 
+  font-weight: bold; 
+}
+   
