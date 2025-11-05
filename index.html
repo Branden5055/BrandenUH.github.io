@@ -387,7 +387,7 @@
     maxlength="20" 
     required
     onblur="checkUserID()"
-    pattern="^[A-Za-z][A-Za-z0-9]{4,19}$"
+    pattern="^[A-Za-z][A-Za-z0-9_-]{4,19}$"
     oninvalid="this.setCustomValidity('Please check your User ID')"
     oninput="this.setCustomValidity('')">
   <span id="userIDMessage" class="error-message"></span>
