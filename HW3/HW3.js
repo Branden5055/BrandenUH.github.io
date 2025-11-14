@@ -2,7 +2,7 @@
  Name: Branden Brar
  File: hw3.js
  Date Created: 2025-10-12
- Date Updated: 2025-10-25
+ Date Updated: 2025-11-14
  Purpose: JavaScript for Homework 3 
 
 */
