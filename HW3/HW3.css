@@ -67,5 +67,7 @@ footer {
 .error-message { 
   color: red; 
   font-weight: bold; 
+  margin-top: 4px;
+  display: block;
 }
    
