@@ -20,11 +20,6 @@
     z-index: 1000;
 }
 
- .header h1 {
-    color: white;
-    margin: 0;
-}
-
 table.form-table {
   border: 1px solid black;
   border-collapse: collapse;
