@@ -12,7 +12,7 @@
     margin: 0;
  }
 
-.header {
+header {
     background-color: Crimson;
     padding: 15px;
     position: sticky;
@@ -20,7 +20,7 @@
     z-index: 1000;
 }
 
- h1 {
+ header h1 {
     color: white;
     margin: 0;
 }
