@@ -308,6 +308,60 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+// Start of Cookies Code
+function setCookie(cookieName, cookieValue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cookieName + "=" + encodeURIComponent(cookieValue) + ";" + expires + ";path=/;SameSite=Strict";
+}
+
+
+function checkCookie() {
+    let firstNameCookie = getCookie("firstNameCookie");
+    if (firstNameCookie != "" && document.getElementById("popupMessage") && document.getElementById("customPopup")) {
+        document.getElementById("popupMessage").textContent = "Welcome back " + firstNameCookie + 
+            ".\nPress OK to confirm or Cancel if this isn't " + firstNameCookie + ".";
+        
+        document.getElementById("customPopup").style.display = "block";
+        
+        document.getElementById("popupConfirm").onclick = function() {
+            document.getElementById("firstName").value = firstNameCookie;
+            document.getElementById("customPopup").style.display = "none";
+        };
+        
+        document.getElementById("popupCancel").onclick = function() {
+            setCookie("firstNameCookie", "", 0);
+            document.getElementById("customPopup").style.display = "none";
+        };
+    }
+}
+
+function getCookie(cookieName) {
+    let name = cookieName + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return decodeURIComponent(c.substring(name.length, c.length));
+        }
+    }
+    return "";
+}
+
+function deleteCookie(cookieName) {
+    setCookie(cookieName, "", -1);
+}
+
+window.onload = function () {
+    checkCookie();
+};
+
+
+
 function validateForm() {
     error_flag = 0;
 
