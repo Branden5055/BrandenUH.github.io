@@ -1,9 +1,10 @@
- /* 
+/* 
  Name: Branden Brar
- File: HW4.js
+ File: hw4.js
  Date Created: 2025-10-12
  Date Updated: 2025-11-14
- Purpose: JavaScript for Homework 4
+ Purpose: JavaScript for Homework 3 
+
 */
 
 var error_flag = 0; 
