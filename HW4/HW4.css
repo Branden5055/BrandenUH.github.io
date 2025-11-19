@@ -9,6 +9,7 @@
  body {
     background-color:LightGray;
     font-family:Arial, sans-serif; 
+    margin: 0;
  }
 
 .header {
@@ -16,6 +17,7 @@
     padding: 15px;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 header h1 {
