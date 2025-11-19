@@ -11,7 +11,7 @@
     font-family:Arial, sans-serif; 
  }
 
-header {
+.header {
     background-color: Crimson;
     padding: 15px;
     position: sticky;
