@@ -322,7 +322,7 @@ function checkCookie() {
     let firstNameCookie = getCookie("firstNameCookie");
     if (firstNameCookie != "" && document.getElementById("popupMessage") && document.getElementById("customPopup")) {
         document.getElementById("popupMessage").textContent = "Welcome back " + firstNameCookie + 
-            ".\nPress 'This is me' to confirm or 'That is not me' if this isn't you.";
+            ".\nPress OK to confirm or Cancel if this isn't " + firstNameCookie + ".";
         
         document.getElementById("customPopup").style.display = "block";
         
