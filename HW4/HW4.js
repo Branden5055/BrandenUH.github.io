@@ -430,21 +430,6 @@ function readBackForm() {
         document.getElementById("painlevel").value = localStorage.getItem("painlevel");
         document.getElementById("paindisplay").innerHTML = localStorage.getItem("painlevel");
     }
-
-    document.getElementById("covid").checked =
-        (localStorage.getItem("covid") === "true");
-
-    document.getElementById("bloodpressure").checked =
-        (localStorage.getItem("bloodpressure") === "true");
-
-    document.getElementById("cancer").checked =
-        (localStorage.getItem("cancer") === "true");
-
-    document.getElementById("diabetes").checked =
-        (localStorage.getItem("diabetes") === "true");
-
-    document.getElementById("arthritis").checked =
-        (localStorage.getItem("arthritis") === "true");
 }
 
 function validateForm() {
