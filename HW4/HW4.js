@@ -3,7 +3,7 @@
  File: hw4.js
  Date Created: 2025-10-12
  Date Updated: 2025-11-14
- Purpose: JavaScript for Homework 3 
+ Purpose: JavaScript for Homework 4 
 
 */
 
