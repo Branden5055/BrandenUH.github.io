@@ -363,6 +363,7 @@ function checkCookie() {
         
         document.getElementById("popupConfirm").onclick = function() {
             document.getElementById("firstName").value = firstNameCookie;
+            readBackForm();
             document.getElementById("customPopup").style.display = "none";
         };
         
@@ -370,7 +371,7 @@ function checkCookie() {
             setCookie("firstNameCookie", "", 0);
             document.getElementById("customPopup").style.display = "none";
             localStorage.clear();
-        };
+        }
     }
 }
 
@@ -429,6 +430,21 @@ function readBackForm() {
         document.getElementById("painlevel").value = localStorage.getItem("painlevel");
         document.getElementById("paindisplay").innerHTML = localStorage.getItem("painlevel");
     }
+
+    document.getElementById("covid").checked =
+        (localStorage.getItem("covid") === "true");
+
+    document.getElementById("bloodpressure").checked =
+        (localStorage.getItem("bloodpressure") === "true");
+
+    document.getElementById("cancer").checked =
+        (localStorage.getItem("cancer") === "true");
+
+    document.getElementById("diabetes").checked =
+        (localStorage.getItem("diabetes") === "true");
+
+    document.getElementById("arthritis").checked =
+        (localStorage.getItem("arthritis") === "true");
 }
 
 function validateForm() {
