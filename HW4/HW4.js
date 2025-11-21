@@ -161,7 +161,9 @@ function checkDOB() {
     } else {
         errorMessage.innerHTML = ""; 
 
+
         localStorage.setItem("dob", input);
+     
     }
 }
 
@@ -177,12 +179,12 @@ function checkFirstName() {
             document.getElementById("firstNameMessage").innerHTML = "";   
             setCookie("firstNameCookie", x, 1);
          
+            localStorage.setItem("firstName", x);
+         
         }
         else {
             document.getElementById("firstNameMessage").innerHTML = "Invalid characters in name.";
             error_flag = 1;
-
-            localStorage.setItem("firstName", x);
         }
     }
 }
@@ -194,13 +196,14 @@ function checkMiddle() {
     if (x.length > 0) {
         if (x.match(/^[A-Za-z]$/)) {
             document.getElementById("middleInitialMessage").innerHTML = "";
+         
+            localStorage.setItem("middleInitial", x);
 
         }
         else {
             document.getElementById("middleInitialMessage").innerHTML = "Invalid characters in middle name.";
             error_flag = 1;
-
-            localStorage.setItem("middleInitial", x);
+         
         }
     }
 }
@@ -216,13 +219,14 @@ function checkLastName() {
     else {
         if (x.match(/^[A-Za-z\s'-]{2,}$/)) {
             document.getElementById("lastNameMessage").innerHTML = "";
+         
+            localStorage.setItem("lastName", x);
 
         }
         else {
             document.getElementById("lastNameMessage").innerHTML = "Invalid characters in last name.";
             error_flag = 1;
          
-            localStorage.setItem("lastName", x);
         }
     }
 }
@@ -236,11 +240,12 @@ function checkUserID() {
     if (x.match(/^[A-Za-z][A-Za-z0-9_-]{4,19}$/)) {
         userIDMessage.innerHTML = "";
      
+        localStorage.setItem("userID", x);
+     
     } else {
         userIDMessage.innerHTML = "User ID must start with a letter and be at least 5 characters long but not longer than 20.";
         error_flag = 1;
-     
-        localStorage.setItem("userID", x);
+  
     }
 }
 
@@ -253,6 +258,7 @@ function checkAddress1() {
         document.getElementById("addressOneMessage").innerHTML = "Enter at least two characters on Address Line 1";
         error_flag = 1;
         console.log(error_flag);
+     
     }
     else {
         document.getElementById("addressOneMessage").innerHTML = "";
@@ -270,6 +276,7 @@ function checkAddress2() {
         document.getElementById("addressTwoMessage").innerHTML = "Enter at least two characters on Address Line 2";
         error_flag = 1;
         console.log(error_flag);
+
     }
     else {
         document.getElementById("addressTwoMessage").innerHTML = "";
@@ -280,15 +287,19 @@ function checkAddress2() {
 }
 
 function checkcity() {
-    if (document.getElementById("city").value.match(/^[A-Za-z\s'-]{2,}$/)) {
+
+    let x = document.getElementById("city").value;
+ 
+    if (x.match(/^[A-Za-z\s'-]{2,}$/)) {
         document.getElementById("city_message").innerHTML = "";
+     
+        localStorage.setItem("city", x);
 
     }
     else {
         document.getElementById("city_message").innerHTML = "Invalid characters in City name.";
         error_flag = 1;
      
-        localStorage.setItem("city", value);
     }
 }
 
