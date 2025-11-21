@@ -397,7 +397,39 @@ window.onload = function () {
     checkCookie();
 };
 
-
+function readBackForm() {
+    if (localStorage.getItem("firstName")) {
+        document.getElementById("firstName").value = localStorage.getItem("firstName");
+    }
+    if (localStorage.getItem("middleInitial")) {
+        document.getElementById("middleInitial").value = localStorage.getItem("middleInitial");
+    }
+    if (localStorage.getItem("lastName")) {
+        document.getElementById("lastName").value = localStorage.getItem("lastName");
+    }
+    if (localStorage.getItem("dob")) {
+        document.getElementById("dob").value = localStorage.getItem("dob");
+    }
+    if (localStorage.getItem("userID")) {
+        document.getElementById("userID").value = localStorage.getItem("userID");
+    }
+    if (localStorage.getItem("address1")) {
+        document.getElementById("address1").value = localStorage.getItem("address1");
+    }
+    if (localStorage.getItem("address2")) {
+        document.getElementById("address2").value = localStorage.getItem("address2");
+    }
+    if (localStorage.getItem("city")) {
+        document.getElementById("city").value = localStorage.getItem("city");
+    }
+    if (localStorage.getItem("email")) {
+        document.getElementById("email").value = localStorage.getItem("email");
+    }
+    if (localStorage.getItem("painlevel")) {
+        document.getElementById("painlevel").value = localStorage.getItem("painlevel");
+        document.getElementById("paindisplay").innerHTML = localStorage.getItem("painlevel");
+    }
+}
 
 function validateForm() {
     error_flag = 0;
