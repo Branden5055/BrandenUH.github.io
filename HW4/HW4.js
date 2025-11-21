@@ -75,7 +75,8 @@ var output = document.getElementById("paindisplay");
 if (slider && output) {
   output.innerHTML = slider.value;
   slider.oninput = function() {
-  output.innerHTML = this.value;
+      output.innerHTML = this.value;
+      localStorage.setItem("painlevel", this.value);
   }
 }
 
