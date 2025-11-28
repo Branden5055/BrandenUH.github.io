@@ -380,9 +380,9 @@ function deleteCookie(cookieName) {
     setCookie(cookieName, "", -1);
 }
 
-window.onload = function () {
-    checkCookie();
-};
+document.addEventListener("DOMContentLoaded", function () {
+ fetchStates();
+ checkCookie();
 
 function readBackForm() {
     if (localStorage.getItem("firstName")) {
