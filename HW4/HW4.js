@@ -423,6 +423,22 @@ function timeClock() {
  setInterval(timeClock, 1000);
  timeClock();
 
+async function fetchStates() {
+ try {
+  const response = await fetch("states.txt");
+
+  if (!response.ok) {
+   throw new Error("Error loading states: " + response.status);
+  }
+
+  const text = await response.text();
+  document.getElementById("state").innerHTML = text;
+
+ } catch (error) {
+  document.getElementById("state").innerHTML = '<option value="">Unable to load states</option>';
+ }
+}
+
 
 function validateForm() {
     error_flag = 0;
