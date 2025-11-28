@@ -427,16 +427,14 @@ function readBackForm() {
     }
 }
 
-window.onload = function() {
 function timeClock() {
  const now = new Date();
  const formattedDateTime = now.toLocaleString();
  document.getElementById("today").textContent = formattedDateTime;
-};
-
+}
  setInterval(timeClock, 1000);
  timeClock();
-};
+
 
 function validateForm() {
     error_flag = 0;
