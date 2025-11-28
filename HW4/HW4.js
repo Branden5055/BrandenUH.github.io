@@ -427,6 +427,15 @@ function readBackForm() {
     }
 }
 
+function timeClock() {
+ const now = new Date();
+ const formattedDateTime = now.toLocaleString();
+ document.getElementById("timeClock").textContent = formattedDateTime;
+}
+
+setInterval(timeClock, 1000);
+timeClock();
+
 function validateForm() {
     error_flag = 0;
 
