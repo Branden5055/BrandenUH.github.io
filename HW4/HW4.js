@@ -253,35 +253,24 @@ function checkUserID() {
 
 function checkAddress1() {
     let x = document.getElementById("address1").value;
-    console.log(x);
-    console.log(x.length);
     if (x.length < 2) {
         document.getElementById("addressOneMessage").innerHTML = "Enter at least two characters on Address Line 1";
-        error_flag = 1;
-        console.log(error_flag);
-     
+        error_flag = 1;   
     }
     else {
         document.getElementById("addressOneMessage").innerHTML = "";
-
         localStorage.setItem("address1", x);
     }
-
 }
 
 function checkAddress2() {
     let x = document.getElementById("address2").value;
-    console.log(x);
-    console.log(x.length);
     if (x.length < 2 && x.length > 0) {
         document.getElementById("addressTwoMessage").innerHTML = "Enter at least two characters on Address Line 2";
-        error_flag = 1;
-        console.log(error_flag);
-
+        error_flag = 1;      
     }
     else {
         document.getElementById("addressTwoMessage").innerHTML = "";
-
         localStorage.setItem("address2", x);
     }
 
@@ -303,7 +292,6 @@ function checkcity() {
      
     }
 }
-
 
 function checkEmail() {
  let email = document.getElementById("email");
