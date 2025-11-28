@@ -381,8 +381,9 @@ function deleteCookie(cookieName) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
- fetchStates();
- checkCookie();
+    fetchStates();
+    checkCookie();
+});
 
 function readBackForm() {
     if (localStorage.getItem("firstName")) {
