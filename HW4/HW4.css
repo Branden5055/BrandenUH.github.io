@@ -142,6 +142,9 @@ footer {
  to { top: 0; opacity: 1; }
 }
 
+#today {
+ font-weight: bold;
+}
 
 
  
