@@ -468,6 +468,7 @@ function validateForm() {
     checkAddress1();
     checkAddress2();
     checkcity();
+    checkState();
     checkEmail();
     checkForErrors();
 }
