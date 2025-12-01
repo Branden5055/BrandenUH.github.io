@@ -315,6 +315,20 @@ function checkEmail() {
  }
 }
 
+function checkState() {
+ var state = document.getElementById("state").value;
+ var message = document.getElementById("state_message");
+
+ if (state == "") {
+  message.innerHTML = "Please select a state.";
+  error_flag = 1;
+ }
+ else {
+  message.innerHTML = "";
+  localStorage.setItem("state", state);
+ }
+}
+
 function checkForErrors() {
     if (error_flag === 0) {
         document.getElementById("submit").disabled = false;
