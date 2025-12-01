@@ -433,6 +433,9 @@ function readBackForm() {
         document.getElementById("painlevel").value = localStorage.getItem("painlevel");
         document.getElementById("paindisplay").innerHTML = localStorage.getItem("painlevel");
     }
+    if (localStorage.getItem("email")) {
+        document.getElementById("email").value = localStorage.getItem("email");
+    }
 }
 
 function timeClock() {
