@@ -265,15 +265,18 @@ function checkAddress1() {
 
 function checkAddress2() {
     let x = document.getElementById("address2").value;
+ 
     if (x.length < 2 && x.length > 0) {
         document.getElementById("addressTwoMessage").innerHTML = "Enter at least two characters on Address Line 2";
         error_flag = 1;      
     }
     else {
         document.getElementById("addressTwoMessage").innerHTML = "";
-        localStorage.setItem("address2", x);
-    }
-
+     
+        if (x.length >= 2) {
+          localStorage.setItem("address2", x);
+     }
+   }
 }
 
 function checkcity() {
@@ -312,6 +315,8 @@ function checkEmail() {
  }
  else {
   message.innerHTML = "";
+
+  localStorage.setItem("email", emailValue);
  }
 }
 
