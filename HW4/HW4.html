@@ -198,8 +198,10 @@
         title="Please enter your Zip Code here."
         required
         pattern="[0-9]{5}"
+        onblur="checkZipCode()"
         oninvalid="this.setCustomValidity('Enter 5-digit ZIP Code')"
         oninput="this.setCustomValidity('')">
+    <span id="zipcode_message" class="error-message"></span>
       </td>
     </tr>
 
