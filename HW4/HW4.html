@@ -180,8 +180,9 @@
       <tr>
         <td>
         <label for="state">State:</label>
-        <select id="state" name="state" required>
+        <select id="state" name="state" onblur="checkState()" required>
         </select>
+            <span id="state_message" class="error-message"></span>
       </td>
     </tr>
 
