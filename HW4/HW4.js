@@ -454,6 +454,9 @@ function readBackForm() {
     if (localStorage.getItem("email")) {
         document.getElementById("email").value = localStorage.getItem("email");
     }
+    if (localStorage.getItem("zipcode")) {
+        document.getElementById("zipcode").value = localStorage.getItem("zipcode");
+    }
 }
 
 function timeClock() {
