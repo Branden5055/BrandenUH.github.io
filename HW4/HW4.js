@@ -279,6 +279,24 @@ function checkAddress2() {
    }
 }
 
+function checkZipCode() {
+ let x = document.getElementById("zipcode").value;
+ let message = document.getElementById("zipcode_message");
+
+ if (x === "") {
+  message.innerHTML = "Zip Code is required.";
+  error_flag = 1;
+ }
+ else if (!x.match(/^[0-9]{5}$/)) {
+  message.innerHTML = "Please enter a valid 5-digit Zip Code.";
+  error_flag = 1;
+ }
+ else {
+  message.innerHTML = "";
+  localStorage.setItem("zipcode", x);
+ }
+}
+
 function checkcity() {
 
     let x = document.getElementById("city").value;
@@ -475,6 +493,7 @@ function validateForm() {
     checkForMatch();
     checkAddress1();
     checkAddress2();
+    checkZipCode();
     checkcity();
     checkState();
     checkEmail();
