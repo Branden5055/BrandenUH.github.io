@@ -303,10 +303,10 @@ function checkPhone() {
         return;
     }
 
-    let phonePattern = [0-9]{3}-[0-9]{3}-[0-9]{4};
+    let phonePattern = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
 
     if (!phonePattern.test(phone)) {
-        phoneMessage.innerHTML = "Enter a valid 10-digit phone number.";
+        phoneMessage.innerHTML = "Please enter a valid 10-digit phone number.";
         error_flag = 1;
     } else {
         phoneMessage.innerHTML = "";
