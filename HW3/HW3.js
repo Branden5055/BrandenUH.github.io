@@ -11,7 +11,6 @@ var error_flag = 0;
 
 function setup() {
     error_flag = 0; 
-    console.log(error_flag);
 }
 
 function getdata1() {
@@ -237,7 +236,6 @@ function checkAddress1() {
     if (x.length < 2) {
         document.getElementById("addressOneMessage").innerHTML = "Enter at least two characters on Address Line 1";
         error_flag = 1;
-        console.log(error_flag);
     }
     else {
         document.getElementById("addressOneMessage").innerHTML = "";
@@ -252,7 +250,6 @@ function checkAddress2() {
     if (x.length < 2 && x.length > 0) {
         document.getElementById("addressTwoMessage").innerHTML = "Enter at least two characters on Address Line 2";
         error_flag = 1;
-        console.log(error_flag);
     }
     else {
         document.getElementById("addressTwoMessage").innerHTML = "";
