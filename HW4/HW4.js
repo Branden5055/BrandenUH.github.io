@@ -478,6 +478,9 @@ function readBackForm() {
     if (localStorage.getItem("zipcode")) {
         document.getElementById("zipcode").value = localStorage.getItem("zipcode");
     }
+    if (localStorage.getItem("state")) {
+        document.getElementById("state").value = localStorage.getItem("state");
+    }
     if (localStorage.getItem("phoneNumber")) {
         document.getElementById("phone").value = localStorage.getItem("phoneNumber");
     }
