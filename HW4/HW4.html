@@ -51,7 +51,7 @@
         oninvalid="this.setCustomValidity('First Name is not valid, please try again.')"
         oninput="checkFirstName()"
         onblur="checkFirstName()" 
-        pattern="^[A-Za-z\s'-]{2,}$">
+        pattern="^[A-Za-z' -]{2,}$">
       <span id="firstNameMessage" class="error-message"></span>
       </td>
     </tr>
@@ -83,7 +83,7 @@
         size="20" 
         maxlength="30" 
         required
-        pattern="^[A-Za-z\s'-]{2,}$"
+        pattern="^[A-Za-z' -]{2,}$"
         oninvalid="this.setCustomValidity('Letters only.')"
         oninput="this.setCustomValidity('')"
         onblur="checkLastName()">
@@ -171,7 +171,7 @@
         onblur="checkcity()" 
         oninput="this.setCustomValidity('')"
         oninvalid="this.setCustomValidity('Please choose a City.')"
-        pattern="^[A-Za-z\s'-]{2,}$"
+        pattern="^[A-Za-z' -]{2,}$"
         maxlength="30" required>
       <span id="city_message" class="error-message"></span>
       </td>
