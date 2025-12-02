@@ -293,6 +293,26 @@ function checkEmail() {
  }
 }
 
+function checkPhone() {
+    let phone = document.getElementById("phone").value.trim();
+    let phoneMessage = document.getElementById("phoneMessage");
+
+    if (phone === "") {
+        phoneMessage.innerHTML = "Phone Number is required.";
+        error_flag = 1;
+        return;
+    }
+
+    let phonePattern = [0-9]{3}-[0-9]{3}-[0-9]{4};
+
+    if (!phonePattern.test(phone)) {
+        phoneMessage.innerHTML = "Enter a valid 10-digit phone number.";
+        error_flag = 1;
+    } else {
+        phoneMessage.innerHTML = "";
+    }
+}
+
 function checkForErrors() {
     if (error_flag === 0) {
         document.getElementById("submit").disabled = false;
@@ -322,5 +342,6 @@ function validateForm() {
     checkAddress2();
     checkcity();
     checkEmail();
+    checkPhone();
     checkForErrors();
 }
