@@ -175,7 +175,7 @@ function checkFirstName() {
         error_flag = 1;
     }
     else {
-        if (x.match(/^[a-zA-Z\s'-]+$/)) {
+        if (x.match(/^[A-Za-z' -]+$/)) {
             document.getElementById("firstNameMessage").innerHTML = "";   
             setCookie("firstNameCookie", x, 1);
          
@@ -217,7 +217,7 @@ function checkLastName() {
         error_flag = 1;
     }
     else {
-        if (x.match(/^[A-Za-z\s'-]{2,}$/)) {
+        if (x.match(/^[A-Za-z' -]+$/)) {
             document.getElementById("lastNameMessage").innerHTML = "";
          
             localStorage.setItem("lastName", x);
@@ -273,7 +273,7 @@ function checkAddress2() {
         document.getElementById("addressTwoMessage").innerHTML = "";
      
         if (x.length >= 2) {
-          localStorage.setItem("address2", x);
+        localStorage.setItem("address2", x);
      }
    }
 }
@@ -320,17 +320,14 @@ function checkPhone() {
 function checkcity() {
 
     let x = document.getElementById("city").value;
- 
-    if (x.match(/^[A-Za-z\s'-]{2,}$/)) {
-        document.getElementById("city_message").innerHTML = "";
-     
-        localStorage.setItem("city", x);
 
+    if (x.match(/^[A-Za-z' -]{2,}$/)) {
+        document.getElementById("city_message").innerHTML = "";
+        localStorage.setItem("city", x);
     }
     else {
         document.getElementById("city_message").innerHTML = "Invalid characters in City name.";
         error_flag = 1;
-     
     }
 }
 
