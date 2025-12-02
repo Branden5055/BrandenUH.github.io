@@ -256,15 +256,18 @@ function checkAddress2() {
 }
 
 function checkcity() {
-    if (document.getElementById("city").value.match(/^[A-Za-z' -]{2,}$/)) {
+
+    let x = document.getElementById("city").value;
+
+    if (x.match(/^[A-Za-z' -]{2,}$/)) {
         document.getElementById("city_message").innerHTML = "";
+        localStorage.setItem("city", x);
     }
     else {
         document.getElementById("city_message").innerHTML = "Invalid characters in City name.";
         error_flag = 1;
     }
 }
-
 
 function checkEmail() {
  let email = document.getElementById("email");
