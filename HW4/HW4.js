@@ -11,7 +11,6 @@ var error_flag = 0;
 
 function setup() {
     error_flag = 0; 
-    console.log(error_flag);
 }
 
 function getdata1() {
