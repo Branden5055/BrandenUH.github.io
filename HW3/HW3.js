@@ -204,7 +204,7 @@ function checkLastName() {
         error_flag = 1;
     }
     else {
-        if (x.match(/^[A-Za-z\s'-]{2,}$/)) {
+        if (x.match(/^[A-Za-z' -]{2,}$/)) {
             document.getElementById("lastNameMessage").innerHTML = "";
         }
         else {
