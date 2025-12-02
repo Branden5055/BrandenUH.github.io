@@ -258,7 +258,7 @@ function checkAddress2() {
 }
 
 function checkcity() {
-    if (document.getElementById("city").value.match(/^[A-Za-z\s'-]{2,}$/)) {
+    if (document.getElementById("city").value.match(/^[A-Za-z' -]{2,}$/)) {
         document.getElementById("city_message").innerHTML = "";
     }
     else {
