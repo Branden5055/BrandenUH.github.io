@@ -297,6 +297,27 @@ function checkZipCode() {
  }
 }
 
+function checkPhone() {
+    let phone = document.getElementById("phone").value.trim();
+    let phoneMessage = document.getElementById("phoneMessage");
+
+    if (phone === "") {
+        phoneMessage.innerHTML = "Phone Number is required.";
+        error_flag = 1;
+        return;
+    }
+
+    let phonePattern = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
+
+    if (!phonePattern.test(phone)) {
+        phoneMessage.innerHTML = "Please enter a valid 10-digit phone number.";
+        error_flag = 1;
+    } else {
+        phoneMessage.innerHTML = "";
+        localStorage.setItem("phoneNumber", phone);
+    }
+}
+
 function checkcity() {
 
     let x = document.getElementById("city").value;
@@ -457,6 +478,9 @@ function readBackForm() {
     if (localStorage.getItem("zipcode")) {
         document.getElementById("zipcode").value = localStorage.getItem("zipcode");
     }
+    if (localStorage.getItem("phoneNumber")) {
+        document.getElementById("phone").value = localStorage.getItem("phoneNumber");
+    }
 }
 
 function timeClock() {
@@ -500,5 +524,6 @@ function validateForm() {
     checkcity();
     checkState();
     checkEmail();
+    checkPhone();
     checkForErrors();
 }
