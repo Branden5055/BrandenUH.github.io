@@ -170,7 +170,7 @@ function checkFirstName() {
         error_flag = 1;
     }
     else {
-        if (x.match(/^[a-zA-Z\s'-]+$/)) {
+        if (x.match(/^[A-Za-z' -]+$/)) {
             document.getElementById("firstNameMessage").innerHTML = "";     
         }
         else {
